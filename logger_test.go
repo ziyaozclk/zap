@@ -21,6 +21,7 @@
 package zap
 
 import (
+	"context"
 	"errors"
 	"sync"
 	"testing"
@@ -597,6 +598,47 @@ func TestNopLogger(t *testing.T) {
 		assert.Panics(t, func() {
 			logger.Panic("great sadness")
 		}, "Nop logger should still cause panics.")
+	})
+}
+
+func TestRequestContext(t *testing.T) {
+	t.Run("Context option use while logger create", func(t *testing.T) {
+		t.Run("Context is not nil", func(t *testing.T) {
+			requestContextOption := Context(func(ctx context.Context) []Field {
+				var fields []Field
+
+				if ctxRequestPath, ok := ctx.Value("Correlation-ID").(string); ok {
+					fields = append(fields, String("Correlation-ID", ctxRequestPath))
+				}
+
+				return fields
+			})
+			logger, _ := NewProduction(requestContextOption)
+
+			ctx := context.TODO()
+			ctx = context.WithValue(ctx, "Correlation-ID", "e9718aab-aa1a-4ad8-b1e6-690f6c43bd15")
+
+			logger.InfoCtx(ctx, "Hello Zap Logger Community !!!")
+			logger.DebugCtx(ctx, "Hello Zap Logger Community !!!")
+			logger.ErrorCtx(ctx, "Hello Zap Logger Community !!!")
+			logger.WarnCtx(ctx, "Hello Zap Logger Community !!!")
+			logger.DPanicCtx(ctx, "Hello Zap Logger Community !!!")
+		})
+	})
+
+	t.Run("Context option not use while logger create", func(t *testing.T) {
+		t.Run("Context is not nil", func(t *testing.T) {
+			logger, _ := NewProduction()
+
+			ctx := context.TODO()
+			ctx = context.WithValue(ctx, "Correlation-ID", "e9718aab-aa1a-4ad8-b1e6-690f6c43bd15")
+
+			logger.InfoCtx(ctx, "Hello Zap Logger Community !!!")
+			logger.DebugCtx(ctx, "Hello Zap Logger Community !!!")
+			logger.ErrorCtx(ctx, "Hello Zap Logger Community !!!")
+			logger.WarnCtx(ctx, "Hello Zap Logger Community !!!")
+			logger.DPanicCtx(ctx, "Hello Zap Logger Community !!!")
+		})
 	})
 }
 
