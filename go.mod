@@ -1,4 +1,4 @@
-module go.uber.org/zap
+module github.com/ziyaozclk/zap
 
 go 1.13
 
