@@ -21,9 +21,8 @@
 package zap
 
 import (
+	"github.com/ziyaozclk/zap/zapcore"
 	"time"
-
-	"go.uber.org/zap/zapcore"
 )
 
 // Array constructs a field with the given key and ArrayMarshaler. It provides

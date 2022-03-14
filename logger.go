@@ -23,8 +23,8 @@ package zap
 import (
 	"context"
 	"fmt"
-	"go.uber.org/zap/internal/bufferpool"
-	"go.uber.org/zap/zapcore"
+	"github.com/ziyaozclk/zap/internal/bufferpool"
+	"github.com/ziyaozclk/zap/zapcore"
 	"io/ioutil"
 	"os"
 	"strings"

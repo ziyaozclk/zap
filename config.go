@@ -22,10 +22,9 @@ package zap
 
 import (
 	"fmt"
+	"github.com/ziyaozclk/zap/zapcore"
 	"sort"
 	"time"
-
-	"go.uber.org/zap/zapcore"
 )
 
 // SamplingConfig sets a sampling strategy for the logger. Sampling caps the

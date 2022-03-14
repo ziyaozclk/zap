@@ -26,7 +26,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	"go.uber.org/zap/zaptest/observer"
+	"github.com/ziyaozclk/zap/zaptest/observer"
 )
 
 type constantClock time.Time

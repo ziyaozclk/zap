@@ -28,7 +28,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"go.uber.org/atomic"
-	"go.uber.org/zap/zapcore"
+	"github.com/ziyaozclk/zap/zapcore"
 )
 
 func TestConfig(t *testing.T) {
@@ -52,7 +52,7 @@ func TestConfig(t *testing.T) {
 			expectRe: "DEBUG\tzap/config_test.go:" + `\d+` + "\tdebug\t" + `{"k": "v", "z": "zz"}` + "\n" +
 				"INFO\tzap/config_test.go:" + `\d+` + "\tinfo\t" + `{"k": "v", "z": "zz"}` + "\n" +
 				"WARN\tzap/config_test.go:" + `\d+` + "\twarn\t" + `{"k": "v", "z": "zz"}` + "\n" +
-				`go.uber.org/zap.TestConfig.\w+`,
+				`github.com/ziyaozclk/zap.TestConfig.\w+`,
 		},
 	}
 

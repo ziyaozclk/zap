@@ -1,4 +1,4 @@
-module go.uber.org/zap/tools
+module github.com/ziyaozclk/zap/tools
 
 require (
 	golang.org/x/lint v0.0.0-20190930215403-16217165b5de

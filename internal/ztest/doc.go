@@ -21,4 +21,4 @@
 // Package ztest provides low-level helpers for testing log output. These
 // utilities are helpful in zap's own unit tests, but any assertions using
 // them are strongly coupled to a single encoding.
-package ztest // import "go.uber.org/zap/internal/ztest"
+package ztest // import "github.com/ziyaozclk/zap/internal/ztest"

@@ -1,4 +1,4 @@
-package: go.uber.org/zap
+package: github.com/ziyaozclk/zap
 license: MIT
 import:
 - package: go.uber.org/atomic

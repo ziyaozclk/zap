@@ -21,11 +21,9 @@
 package zap
 
 import (
-	"testing"
-
-	"go.uber.org/zap/zapcore"
-
 	"github.com/stretchr/testify/assert"
+	"github.com/ziyaozclk/zap/zapcore"
+	"testing"
 )
 
 func TestRegisterDefaultEncoders(t *testing.T) {

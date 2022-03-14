@@ -22,10 +22,9 @@ package zap
 
 import (
 	"fmt"
+	"github.com/ziyaozclk/zap/zapcore"
 	"math"
 	"time"
-
-	"go.uber.org/zap/zapcore"
 )
 
 // Field is an alias for Field. Aliasing this type dramatically

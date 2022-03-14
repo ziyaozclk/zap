@@ -23,7 +23,7 @@ package zap
 import (
 	"flag"
 
-	"go.uber.org/zap/zapcore"
+	"github.com/ziyaozclk/zap/zapcore"
 )
 
 // LevelFlag uses the standard library's flag.Var to declare a global flag

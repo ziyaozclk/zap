@@ -22,13 +22,13 @@ package zapcore
 
 import (
 	"encoding/base64"
+	"github.com/ziyaozclk/zap/internal/bufferpool"
 	"math"
 	"sync"
 	"time"
 	"unicode/utf8"
 
-	"go.uber.org/zap/buffer"
-	"go.uber.org/zap/internal/bufferpool"
+	"github.com/ziyaozclk/zap/buffer"
 )
 
 // For JSON-escaping; see jsonEncoder.safeAddString below.

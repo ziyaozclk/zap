@@ -21,10 +21,9 @@
 package zapcore
 
 import (
+	"github.com/ziyaozclk/zap/internal/ztest"
 	"testing"
 	"time"
-
-	"go.uber.org/zap/internal/ztest"
 )
 
 // Verify that the mock clock satisfies the Clock interface.

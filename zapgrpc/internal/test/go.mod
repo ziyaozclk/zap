@@ -1,4 +1,4 @@
-module go.uber.org/zap/zapgrpc/internal/test
+module github.com/ziyaozclk/zap/zapgrpc/internal/test
 
 go 1.15
 
@@ -11,7 +11,7 @@ require (
 	go.uber.org/atomic v1.9.0 // indirect
 	go.uber.org/goleak v1.1.12 // indirect
 	go.uber.org/multierr v1.7.0 // indirect
-	go.uber.org/zap v1.16.0
+	github.com/ziyaozclk/zap v1.16.0
 	golang.org/x/lint v0.0.0-20210508222113-6edffad5e616 // indirect
 	golang.org/x/mod v0.5.1 // indirect
 	golang.org/x/sys v0.0.0-20211103235746-7861aae1554b // indirect
@@ -21,4 +21,4 @@ require (
 	gopkg.in/yaml.v2 v2.4.0 // indirect
 )
 
-replace go.uber.org/zap => ../../..
+replace github.com/ziyaozclk/zap => ../../..
